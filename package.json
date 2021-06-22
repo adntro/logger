@@ -30,7 +30,7 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint",
-    "deploy": "npm.cmd publish --access public"
+    "deploy": "npm publish --access public"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.2",
