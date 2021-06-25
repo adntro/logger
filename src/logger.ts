@@ -25,7 +25,14 @@ export class Logger {
     console.warn(this.getPrefix('warn') + this._strMessage(message), ...m);
   }
 
-  error(message: string) {
-    console.error(new Error(this.getPrefix('error') + message));
+  error(message: unknown, ...m: unknown[]) {
+    if (message instanceof Error) {
+      const newExp = new Error(
+        `${this.getPrefix('error')} [${message.name}] ${message.message}`
+      );
+      console.error(newExp, message.stack, ...m);
+    } else {
+      console.warn(this.getPrefix('error') + this._strMessage(message), ...m);
+    }
   }
 }

@@ -6,5 +6,5 @@ export declare class Logger {
     debug(message: unknown, ...m: unknown[]): void;
     info(message: unknown, ...m: unknown[]): void;
     warn(message: unknown, ...m: unknown[]): void;
-    error(message: string): void;
+    error(message: unknown, ...m: unknown[]): void;
 }
