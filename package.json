@@ -1,6 +1,6 @@
 {
   "name": "@adntro/logger",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Simple typescript logger",
   "author": "Adntro Genetics SL",
   "repository": {
@@ -30,11 +30,12 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint",
+    "predeploy": "npm run compile",
     "deploy": "npm publish --access public"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.2",
-    "@types/node": "^14.11.2",
+    "@types/node": "^14.18.22",
     "c8": "^7.7.3",
     "gts": "^3.1.0",
     "mocha": "^9.0.1",
